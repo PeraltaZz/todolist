@@ -11,15 +11,16 @@ html {
 }
 
 body {
-  background-image: url(../img/red-bg.png);
+  background-image: url(../img/red-bg.svg);
   background-position: center;
   background-size: cover;
+  padding: 20px;
+  height: 100vh;;
 }
 
 input {
   border: 1px solid;
   border-radius: 5px;
- 
 }
 
 button {
@@ -35,7 +36,7 @@ button {
   transition: 0.4s;
 }
 
-button img{
+button img {
   pointer-events: none;
 }
 
@@ -53,21 +54,21 @@ select {
   display: none;
 }
 
-#cancel-edit-btn:hover{
-  background-color: #D16171;
+#cancel-edit-btn:hover {
+  background-color: #e83949;
   color: #fff;
   border: 1px solid #000;
 }
-
-
 
 /* Todo Header */
 .todo-container {
   max-width: 450px;
   margin: 3rem auto;
-  background: #fbf9f9;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   padding: 1.5rem;
   border-radius: 15px;
 }
@@ -75,14 +76,14 @@ select {
 .todo-container header {
   text-align: center;
   padding: 0 1rem 1rem;
-  border-bottom: 1px solid #D16171;
+  border-bottom: 1px solid #e83949;
 }
 
 /* Todo Form */
 #todo-form,
 #edit-form {
   padding: 1rem;
-  border-bottom: 1px solid #D16171;
+  border-bottom: 1px solid #e83949;
 }
 
 #todo-form p,
@@ -107,7 +108,6 @@ select {
 
 #toolbar {
   padding: 1rem;
-  border-bottom: 1px solid #D16171;
   display: flex;
 }
 
@@ -116,7 +116,7 @@ select {
 }
 
 #search {
-  border-right: 1px solid #D16171;
+  border-right: 1px solid #e83949;
   padding-right: 1rem;
   margin-right: 1rem;
   width: 65%;
@@ -149,7 +149,7 @@ select {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 1rem;
-  border-bottom: 1px solid #D16171;
+  border-bottom: 1px solid #e83949;
   transition: 0.3s;
 }
 
@@ -163,24 +163,56 @@ select {
 }
 
 .done {
-  background: #D16171;
+  background: #e83949;
 }
 
 .done h3 {
   color: #fff;
   text-decoration: line-through;
-  
 }
 
 /* Remover cor de fundo da sugestão automatica */
 input:-webkit-autofill,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:hover {
-    -webkit-box-shadow: 0 0 0px 1000px white inset ;
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+}
+input[type="text"] {
+  caret-color: #000;
+}
+
+#todo-list {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0px 8px 0px 8px;
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+  margin-left: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: #f7f7f7; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f88c84; /* cor de fundo do botão */
+  border-radius: 4px; 
+  width: 50%; 
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e83949;
+}
+
+@media (max-width: 720px) {
+  ::-webkit-scrollbar {
+    display: none;
   }
-  input::-webkit-credentials-auto-fill-button {
-    visibility: hidden;
-  }
-  input[type="text"] {
-    caret-color: white;
-  }
+}
