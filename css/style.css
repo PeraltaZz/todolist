@@ -55,7 +55,7 @@ select {
 }
 
 #cancel-edit-btn:hover {
-  background-color: #e83949;
+  background-color: #f88c84;
   color: #fff;
   border: 1px solid #000;
 }
@@ -76,14 +76,14 @@ select {
 .todo-container header {
   text-align: center;
   padding: 0 1rem 1rem;
-  border-bottom: 1px solid #e83949;
+  border-bottom: 1px solid #f88c84;
 }
 
 /* Todo Form */
 #todo-form,
 #edit-form {
   padding: 1rem;
-  border-bottom: 1px solid #e83949;
+  border-bottom: 1px solid #f88c84;
 }
 
 #todo-form p,
@@ -116,7 +116,7 @@ select {
 }
 
 #search {
-  border-right: 1px solid #e83949;
+  border-right: 1px solid #f88c84;
   padding-right: 1rem;
   margin-right: 1rem;
   width: 65%;
@@ -149,7 +149,7 @@ select {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 1rem;
-  border-bottom: 1px solid #e83949;
+  border-bottom: 1px solid #f88c84;
   transition: 0.3s;
 }
 
@@ -163,7 +163,7 @@ select {
 }
 
 .done {
-  background: #e83949;
+  background: #f88c84;
 }
 
 .done h3 {
